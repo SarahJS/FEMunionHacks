@@ -1,7 +1,7 @@
-<h1>New Report</h1>
-
-<%= form_with scope: :report, url: reports_path, local: true do |form| %>
-  
+<h1>Edit report</h1>
+ 
+<%= form_with(model: @report) do |form| %>
+ 
   <% if @report.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -15,7 +15,7 @@
       </ul>
     </div>
   <% end %>
-
+ 
   <p>
     <%= form.label :title %><br>
     <%= form.text_field :title %>
@@ -29,6 +29,7 @@
   <p>
     <%= form.submit %>
   </p>
+ 
 <% end %>
-
+ 
 <%= link_to 'Back', reports_path %>
