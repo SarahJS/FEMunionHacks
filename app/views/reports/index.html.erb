@@ -5,6 +5,7 @@
   <tr>
     <th>Title</th>
     <th>Text</th>
+    <th colspan="2"></th>
   </tr>
  
   <% @reports.each do |report| %>
@@ -12,6 +13,7 @@
       <td><%= report.title %></td>
       <td><%= report.text %></td>
       <td><%= link_to 'Show', report_path(report) %></td>
+      <td><%= link_to 'Edit', edit_report_path(report) %></td>
     </tr>
   <% end %>
 </table>
