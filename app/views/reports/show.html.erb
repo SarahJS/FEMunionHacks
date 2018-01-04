@@ -1,15 +1,15 @@
-<!-- <p>
-	<strong>Campus:</strong>
-</p> -->
-
 <p>
-  <strong>Title:</strong>
-  <%= @report.title %>
+	<strong>Campus:</strong>
+	<%= @report.campus_type %>
+</p>
+<p>
+ 	<strong>Title:</strong>
+  	<%= @report.title %>
 </p>
  
 <p>
-  <strong>Text:</strong>
-  <%= @report.text %>
+  	<strong>Text:</strong>
+  	<%= @report.text %>
 </p>
 
 <%= link_to 'Edit', edit_report_path(@report) %> |

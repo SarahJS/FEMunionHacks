@@ -28,6 +28,7 @@ class ReportsController < ApplicationController
   		else
   			render 'new'
   		end
+  		#render plain: params[:report].inspect
 	end
 
 	def update
@@ -49,6 +50,6 @@ class ReportsController < ApplicationController
  
 	private
 	  def report_params
-	    params.require(:report).permit(:title, :text)
+	    params.require(:report).permit(:title, :text, :campus_type)
 	  end
 end

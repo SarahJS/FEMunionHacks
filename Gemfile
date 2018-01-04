@@ -16,6 +16,12 @@ gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
+# Use bootstrap to make things pretty:
+gem 'bootstrap-sass', '~> 3.2.0'
+# User autoprefixer for some reason.
+gem 'autoprefixer-rails'
+# Use jquery for js things
+gem 'jquery-rails'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
