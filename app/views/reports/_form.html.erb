@@ -14,23 +14,43 @@
     </div>
   <% end %>
 
+<div>
   <p>
     <%= form.label :campus %><br>
+    <p>Please select the campus where the incident occurred.</p>
     <%= form.select(:campus_type, options_for_select(['Pomona', 'CMC', 'Scripps', 'HMC', 'Pitzer', 'CGU', 'KGI', 'None'])) %>
   </p>
+</div>
 
+<div>
   <p>
     <%= form.label "Name of harasser" %><br>
+    <p>If you don't know, you can put n/a.</p>
     <%= form.text_field :title %>
   </p>
+</div>
  
+<div>
   <p>
     <%= form.label "Description of event" %><br>
+    <p>Describe what happened in as much detail as you are comfortable with.</p>
     <%= form.text_area :text %>
   </p>
+</div>
+<div>
+  <p>
+    <%= form.label "Should we contact a Title IX coordinator?" %><br>
+    <p>In the event that an individual is reported more than once, we can automatically notify a Title IX coordinator. If you would like us not to do this, please select 'no'.</p>
+    <%= radio_button_tag(:answer, "yes") %>
+    <%= label_tag(:answer_yes, "yes") %>
+    <%= radio_button_tag(:answer, "no") %>
+    <%= label_tag(:answer_no, "no") %>
+  </p>
+</div>
  
+<div>
   <p>
     <%= form.submit %>
   </p>
- 
+</div>
 <% end %>
